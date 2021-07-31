@@ -5,7 +5,7 @@ const Cell = (props) => {
     const { walls } = props;
     const [top, right, bottom, left] = walls;
 
-    const renderBorder = wallExists => {return(wallExists ? "2px solid black" : "2px solid white")};
+    const renderBorder = wallExists => {return(wallExists ? "1px solid black" : "1px solid white")};
 
     return (
         <div 
