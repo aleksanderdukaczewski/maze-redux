@@ -1,5 +1,4 @@
 import './App.css';
-// import Cell from "./Cell";
 import Logo from "./Logo";
 import Game from "./Game";
 

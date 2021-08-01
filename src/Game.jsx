@@ -1,807 +1,384 @@
 import React from 'react';
 import Cell from "./Cell";
+import Player from "./Player";
 import "./Game.css";
 
-const testCellInfo = [true, true, true, true];
-
-const Game = (props) => {
-    const { rows, cols, cellsize } = props;
-    
-    return(
-            <div className="game">
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} /><Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-                <Cell walls={testCellInfo} />
-
-            </div>
+const Game = () => {
+    return (
+        <div className="game">
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell /><Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            <Cell />
+            
+            
+        
+            <Player pos={{x: 1, y: 3}} />
+        </div>
     );
 };
 
