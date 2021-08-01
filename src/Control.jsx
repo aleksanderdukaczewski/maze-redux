@@ -5,6 +5,7 @@ import { moveUp, moveRight, moveDown, moveLeft } from './actions';
 const Control = () => {
     const dispatch = useDispatch();
     useEffect(() => {
+        
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
         return function cleanup() {
