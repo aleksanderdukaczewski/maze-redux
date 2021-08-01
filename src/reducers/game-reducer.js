@@ -7,24 +7,31 @@ import {
     MOVE_DOWN, 
     MOVE_LEFT 
 } from "../actions";
-import { defaultState } from "../utils";
+import { canMoveTo, defaultState } from "../utils";
 
 const gameReducer = (state = defaultState(), action) => {
+    const { pos, gameOver, isRunning, score } = state;
+    const { x, y } = pos;
+
     switch(action.type) {
         case PAUSE:
-            return state;
+            return { ...state, isRunning: false };
         case RESUME:
-            return state;
+            return { ...state, isRunning: true };
         case RESTART:
             return state;
         case MOVE_UP:
-            return state;
+            if (canMoveTo(x,y-1)) 
+                return { ...state, y: y-1 };
         case MOVE_RIGHT:
-            return state;
+            if (canMoveTo(x+1,y))
+                return { ...state, x: x+1 };
         case MOVE_DOWN:
-            return state;
+            if (canMoveTo(x,y+1))
+                return { ...state, y: y+1 };
         case MOVE_LEFT:
-            return state;
+            if (canMoveTo(x-1,y))
+                return { ...state, x: x-1 };
         default: 
             return state;
     }
