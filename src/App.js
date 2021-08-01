@@ -1,4 +1,7 @@
 import './App.css';
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducers from "./reducers";
 import Logo from "./Logo";
 import Game from "./Game";
 
