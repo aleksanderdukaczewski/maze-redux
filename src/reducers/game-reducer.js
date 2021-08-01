@@ -7,8 +7,9 @@ import {
     MOVE_DOWN, 
     MOVE_LEFT 
 } from "../actions";
+import { defaultState } from "../utils";
 
-const gameReducer = (state = {}, action) => {
+const gameReducer = (state = defaultState(), action) => {
     switch(action.type) {
         case PAUSE:
             return state;
@@ -23,6 +24,8 @@ const gameReducer = (state = {}, action) => {
         case MOVE_DOWN:
             return state;
         case MOVE_LEFT:
+            return state;
+        default: 
             return state;
     }
 };

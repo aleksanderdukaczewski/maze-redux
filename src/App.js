@@ -5,16 +5,20 @@ import reducers from "./reducers";
 import Logo from "./Logo";
 import Game from "./Game";
 
+const store = createStore(reducers);
+
 function App() {
   return (
-    <div className="app">
-      <header className="app__header">
-        <Logo />
-      </header>
-      <div className="app__content">
-        <Game />
+    <Provider store={store}>
+      <div className="app">
+        <header className="app__header">
+          <Logo />
+        </header>
+        <div className="app__content">
+          <Game />
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 }
 
