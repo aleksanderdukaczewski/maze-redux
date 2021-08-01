@@ -1,7 +1,7 @@
 .player {
     position: absolute;
     background-color: red;
-    width: 18px;
-    height: 18px;
-    margin: 1px
+    width: 24px;
+    height: 24px;
+    margin: 1px;
 }

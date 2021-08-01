@@ -377,7 +377,7 @@ const Game = () => {
             
             
         
-            <Player pos={{x: 1, y: 3}} />
+            <Player pos={{x: 8, y: 7}} />
         </div>
     );
 };

@@ -6,8 +6,8 @@
 
 .cell {
     border: 1px solid black;
-    border-radius: 2.5px;
+    /* border-radius: 2.5px; */
     background-color: #bdbdbd;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
