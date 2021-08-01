@@ -1,6 +1,6 @@
 export const PAUSE = "PAUSE";
 export const RESUME = "RESUME";
-export const RESTART = "RESTART";
+export const FINISH_GAME = "FINISH_GAME";
 export const MOVE_UP = "MOVE_UP";
 export const MOVE_RIGHT = "MOVE_RIGHT";
 export const MOVE_DOWN = "MOVE_DOWN";
@@ -14,8 +14,8 @@ export const resume = () => {
     return { type: RESUME };
 };
 
-export const restart = () => {
-    return { type: RESTART }
+export const finishGame = () => {
+    return { type: FINISH_GAME }
 }
 
 export const moveUp = () => {

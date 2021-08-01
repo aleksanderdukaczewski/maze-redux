@@ -1,11 +1,21 @@
 import React, { useEffect } from 'react';
+import Timer from "./Timer";
 import { useSelector, useDispatch } from 'react-redux'
-import { moveUp, moveRight, moveDown, moveLeft } from './actions';
+import { moveUp, moveRight, moveDown, moveLeft, finishGame } from './actions';
+import "./Control.css";
 
 const Control = () => {
     const dispatch = useDispatch();
+    const x = useSelector((state) => state.game.x);
+    const y = useSelector((state) => state.game.y);
+    const gameFinished = useSelector((state) => state.game.gameFinished);
+
+
     useEffect(() => {
-        
+        if (x===20 && y===20) {
+            dispatch(finishGame());
+        }
+
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
         return function cleanup() {
@@ -14,7 +24,6 @@ const Control = () => {
         };
     });
     const handleKeyDown = (e) => {
-        console.log("Key event", e);
         handleKeyInput(e.key);
         document.removeEventListener('keydown', handleKeyDown);
     };
@@ -22,28 +31,26 @@ const Control = () => {
         document.addEventListener('keydown', handleKeyDown, {once: true});
     };
     const handleKeyInput = (key) => {
-        switch (key) {
+        if (!gameFinished) switch(key) {
             case "ArrowUp":
-                console.log("dispatching moveup");
                 dispatch(moveUp());
                 break;
             case "ArrowRight":
-                console.log("dispatching moveright");
                 dispatch(moveRight());
                 break;
             case "ArrowDown":
-                console.log("dispatching movedown");
                 dispatch(moveDown());
                 break;
             case "ArrowLeft":
-                console.log("dispatching moveleft");
                 dispatch(moveLeft());
                 break;
         }
     };
 
     return (
-        <></>
+        <div className="control">
+            <Timer gameFinished={gameFinished} />
+        </div>
     )
 }
 

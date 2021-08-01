@@ -2,7 +2,7 @@ export const defaultState = () => {
     return {
         x: 1,
         y: 1,
-        gameOver: false,
+        gameFinished: false,
         isRunning: true,
         score: 0,
     };

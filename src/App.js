@@ -5,7 +5,6 @@ import reducers from "./reducers";
 import Logo from "./Logo";
 import Game from "./Game";
 import Control from "./Control";
-import Timer from "./Timer";
 
 const store = createStore(reducers);
 
@@ -18,9 +17,8 @@ function App() {
         </header>
         <div className="app__content">
           <Game />
-          {/* <Timer /> */}
+          <Control />
         </div>
-        <Control />
       </div>
     </Provider>
   );
