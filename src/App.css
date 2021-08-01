@@ -15,7 +15,7 @@
 }
 
 .app__content {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;

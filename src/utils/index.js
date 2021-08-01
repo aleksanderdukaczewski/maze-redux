@@ -1,6 +1,7 @@
 export const defaultState = () => {
     return {
-        pos: {x: 1, y: 1},
+        x: 1,
+        y: 1,
         gameOver: false,
         isRunning: true,
         score: 0,

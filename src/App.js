@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import reducers from "./reducers";
 import Logo from "./Logo";
 import Game from "./Game";
+import Control from "./Control";
 
 const store = createStore(reducers);
 
@@ -17,6 +18,7 @@ function App() {
         <div className="app__content">
           <Game />
         </div>
+        <Control />
       </div>
     </Provider>
   );

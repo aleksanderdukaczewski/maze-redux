@@ -2,8 +2,7 @@ import React from 'react';
 import "./Player.css";
 
 const Player = (props) => {
-    const { pos } = props;
-    const { x, y } = pos;
+    const { x, y } = props;
 
     return (
         <div 

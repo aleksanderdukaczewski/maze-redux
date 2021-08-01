@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Cell from "./Cell";
 import Player from "./Player";
 import "./Game.css";
 import { useSelector } from 'react-redux';
 
 const Game = () => {
-    const pos = useSelector((state) => state.game.pos);
+    const curr_x = useSelector((state) => state.game.x);
+    const curr_y = useSelector((state) => state.game.y);
+    const [x, setX] = useState(curr_x);
+    const [y, setY] = useState(curr_y);
+
+    useEffect(() => {
+        console.log(x, y);
+        setX(curr_x);
+        setY(curr_y);
+    }, [curr_x, curr_y]);
 
     return (
         <div className="game">
@@ -378,9 +387,8 @@ const Game = () => {
             <Cell />
             <Cell />
             
-            
-        
-            <Player pos={pos} />
+
+            <Player x={x} y={y} />
         </div>
     );
 };
