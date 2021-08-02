@@ -1,13 +1,24 @@
 import { Button, Typography } from '@material-ui/core';
-import { withStyles } from '@material-ui/styles';
-import { fontWeight } from '@material-ui/system';
+import { makeStyles } from '@material-ui/styles';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from "react-redux";
 import { pause, resume, restart } from "./actions";
 import "./Timer.css";
 
+const useStyles = makeStyles({
+    youWon: {
+        color: "green",
+        fontWeight: "bold",
+        marginBottom: "5px",
+    },
+    timer: {
+        fontWeight: "500",
+    }
+});
+
 const Timer = ({ gameFinished, isRunning }) => {
     const dispatch = useDispatch();
+    const classes = useStyles();
     const toggleRunning = () => {return(isRunning ? dispatch(pause()) : dispatch(resume()))};
     const restartGame = () => {
         dispatch(restart()); 
@@ -18,14 +29,6 @@ const Timer = ({ gameFinished, isRunning }) => {
     const [second, setSecond] = useState('00');
     const [minute, setMinute] = useState('00');
     const [counter, setCounter] = useState(0);
-
-    const YouWonTypography = withStyles({
-        root: {
-          color: "green",
-          fontWeight: "bold",
-          marginBottom: "5px",
-        }
-    })(Typography);
 
     useEffect(() => {
         let intervalId;
@@ -44,17 +47,16 @@ const Timer = ({ gameFinished, isRunning }) => {
             setCounter(counter => counter + 1);
           }, 1000)
         }
-    
         return () => clearInterval(intervalId);
       }, [gameFinished, isRunning, counter])
 
     return (
         <div className="timer">
-            {gameFinished && <YouWonTypography>
+            {gameFinished && <Typography className={classes.youWon}>
                 YOU WON!    
-            </YouWonTypography>}
-            <Typography>
-                Timer: {minute}:{second}
+            </Typography>}
+            <Typography className={classes.timer}>
+                Time: {minute}:{second}
             </Typography>
             {!gameFinished && <Button color={isRunning ? "secondary" : "primary"} onClick={toggleRunning}>
                 {isRunning ? "stop" : "start"}
