@@ -5,6 +5,7 @@ export const MOVE_UP = "MOVE_UP";
 export const MOVE_RIGHT = "MOVE_RIGHT";
 export const MOVE_DOWN = "MOVE_DOWN";
 export const MOVE_LEFT = "MOVE_LEFT";
+export const RESTART = "RESTART";
 
 export const pause = () => {
     return { type: PAUSE };
@@ -32,4 +33,8 @@ export const moveDown = () => {
 
 export const moveLeft = () => {
     return { type: MOVE_LEFT };
+};
+
+export const restart = () => {
+    return { type: RESTART };
 };

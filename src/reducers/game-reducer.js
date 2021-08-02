@@ -5,7 +5,8 @@ import {
     MOVE_UP, 
     MOVE_RIGHT, 
     MOVE_DOWN, 
-    MOVE_LEFT 
+    MOVE_LEFT,
+    RESTART, 
 } from "../actions";
 import { canMoveTo, defaultState } from "../utils";
 
@@ -17,6 +18,8 @@ const gameReducer = (state = defaultState(), action) => {
             return { ...state, isRunning: false };
         case RESUME:
             return { ...state, isRunning: true };
+        case RESTART:
+            return defaultState();
         case FINISH_GAME:
             return { ...state, gameFinished: true, isRunning: false };
         case MOVE_UP:

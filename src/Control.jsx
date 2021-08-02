@@ -9,7 +9,7 @@ const Control = () => {
     const x = useSelector((state) => state.game.x);
     const y = useSelector((state) => state.game.y);
     const gameFinished = useSelector((state) => state.game.gameFinished);
-
+    const isRunning = useSelector((state) => state.game.isRunning);
 
     useEffect(() => {
         if (x===20 && y===20) {
@@ -31,7 +31,7 @@ const Control = () => {
         document.addEventListener('keydown', handleKeyDown, {once: true});
     };
     const handleKeyInput = (key) => {
-        if (!gameFinished) switch(key) {
+        if (!gameFinished && isRunning) switch(key) {
             case "ArrowUp":
                 dispatch(moveUp());
                 break;
@@ -49,7 +49,7 @@ const Control = () => {
 
     return (
         <div className="control">
-            <Timer gameFinished={gameFinished} />
+            <Timer gameFinished={gameFinished} isRunning={isRunning} />
         </div>
     )
 }
