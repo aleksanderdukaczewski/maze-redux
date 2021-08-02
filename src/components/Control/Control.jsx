@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Timer from "./Timer";
+import Timer from "./Timer/Timer";
 import { useSelector, useDispatch } from 'react-redux'
-import { moveUp, moveRight, moveDown, moveLeft, finishGame } from './actions';
+import { moveUp, moveRight, moveDown, moveLeft, finishGame } from "../../actions";
 import "./Control.css";
 
 const Control = () => {
@@ -10,12 +10,14 @@ const Control = () => {
     const y = useSelector((state) => state.game.y);
     const gameFinished = useSelector((state) => state.game.gameFinished);
     const isRunning = useSelector((state) => state.game.isRunning);
+    const pointPositions = useSelector((state) => state.game.pointPositions);
+    console.log(pointPositions);
+
 
     useEffect(() => {
         if (x===20 && y===20) {
             dispatch(finishGame());
         }
-
         document.addEventListener('keydown', handleKeyDown);
         document.addEventListener('keyup', handleKeyUp);
         return function cleanup() {

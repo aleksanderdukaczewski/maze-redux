@@ -2,9 +2,10 @@ import './App.css';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reducers from "./reducers";
-import Logo from "./Logo";
-import Game from "./Game";
-import Control from "./Control";
+// import Logo from "./components/Logo/Logo";
+// import Game from "./Game";
+// import Control from "./Control";
+import { Logo, Game, Control } from './components';
 
 const store = createStore(reducers);
 

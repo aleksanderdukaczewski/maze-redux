@@ -2,7 +2,7 @@ import { Button, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from "react-redux";
-import { pause, resume, restart } from "./actions";
+import { pause, resume, restart } from "../../../actions";
 import "./Timer.css";
 
 const useStyles = makeStyles({
@@ -31,23 +31,23 @@ const Timer = ({ gameFinished, isRunning }) => {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
-        let intervalId;
+        let interval;
     
         if (!gameFinished && isRunning) {
-          intervalId = setInterval(() => {
+          interval = setInterval(() => {
             const secondCounter = counter % 60;
             const minuteCounter = Math.floor(counter / 60);
     
-            const computedSecond = String(secondCounter).length === 1 ? `0${secondCounter}`: secondCounter;
-            const computedMinute = String(minuteCounter).length === 1 ? `0${minuteCounter}`: minuteCounter;
+            const newSecond = String(secondCounter).length === 1 ? `0${secondCounter}`: secondCounter;
+            const newMinute = String(minuteCounter).length === 1 ? `0${minuteCounter}`: minuteCounter;
     
-            setSecond(computedSecond);
-            setMinute(computedMinute);
+            setSecond(newSecond);
+            setMinute(newMinute);
     
             setCounter(counter => counter + 1);
           }, 1000)
         }
-        return () => clearInterval(intervalId);
+        return () => clearInterval(interval);
       }, [gameFinished, isRunning, counter])
 
     return (
@@ -61,7 +61,7 @@ const Timer = ({ gameFinished, isRunning }) => {
             {!gameFinished && <Button color={isRunning ? "secondary" : "primary"} onClick={toggleRunning}>
                 {isRunning ? "stop" : "start"}
             </Button>}
-            <Button onClick={restartGame}>
+            <Button onClick={restartGame} >
                 Restart game
             </Button>
         </div>
