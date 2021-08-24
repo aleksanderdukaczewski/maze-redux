@@ -31,15 +31,3 @@ const getRandomInt = (min, max) => {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
-
-const generatePointPositions = (n) => {
-    const res = new Array(n);
-    let num;
-    for (let i = 0; i < n; i++) {
-        do {
-            num = [getRandomInt(1,20), getRandomInt(1,20)]
-        } while(num !== [1,1]);
-        res.push(num);
-    }
-    return res;
-}
