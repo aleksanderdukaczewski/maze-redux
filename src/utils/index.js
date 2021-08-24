@@ -9,7 +9,6 @@ export const defaultState = () => {
         isRunning: true,
         score: 0,
         maze: generateMaze(20, 20, true, getRandomInt(0, 10000)),
-        pointPositions: [],
     };
 };
 
